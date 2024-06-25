@@ -1,0 +1,94 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  background-image: url("../../assets/Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  position: relative;
+}
+
+.banner {
+  padding-top: 206px;
+  max-width: 653px;
+  font-weight: bold;
+  & h2 {
+    margin-bottom: 25px;
+    margin-top: 9px;
+  }
+  & p {
+    @include circle-left;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 44px;
+  & button:first-of-type {
+    @include button;
+  }
+  & button:last-of-type {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: -9%;
+  transform: rotate(90deg) scale(-1, -1);
+  & p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  & a img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.line {
+  height: 2px;
+  width: 70px;
+  background-color: #000;
+}
+
+@media (max-width: 1280px) {
+  .links {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .banner h2 {
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 15px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    background-image: url("../../assets/Background2.jpg");
+    background-position: 58%;
+    height: 640px;
+  }
+}

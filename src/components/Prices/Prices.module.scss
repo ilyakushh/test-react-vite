@@ -1,0 +1,55 @@
+@import "../../styles/mixins.scss";
+
+.prices {
+  padding-top: 65px;
+  & > p {
+    @include circle-middle;
+    margin-bottom: 91px;
+  }
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 300px;
+}
+
+.item {
+  width: 366px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+  &::before {
+    content: "";
+    top: 50%;
+    left: -25px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    background-color: #ffa501;
+  }
+}
+
+@media (max-width: 600px) {
+  .prices {
+    padding-top: 46px;
+    & p {
+      margin-bottom: 41px;
+    }
+  }
+
+  .items {
+    gap: 20px;
+  }
+
+  .header::before {
+    display: none;
+  }
+}

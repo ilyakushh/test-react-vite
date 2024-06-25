@@ -1,0 +1,82 @@
+@import "../../styles/mixins.scss";
+
+.skills {
+  padding-top: 126px;
+  & > p {
+    @include circle-middle;
+    margin-bottom: 6px;
+  }
+  & h3 {
+    @include underline-middle(-22px);
+    margin-bottom: 85px;
+  }
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  justify-items: center;
+  gap: 13px;
+  margin-bottom: 120px;
+}
+
+.item {
+  padding: 30px;
+  border: 1px solid #000;
+  height: 270px;
+  width: 270px;
+  & h5 {
+    margin-top: 25px;
+    margin-bottom: 21px;
+  }
+}
+
+.icon {
+  min-height: 65px;
+}
+
+.ability {
+  width: 350px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 45px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  & h5 {
+    @include circle-left(14px);
+  }
+  & p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding-top: 46px;
+  }
+
+  .skills {
+    padding-top: 46px;
+    & > p {
+      @include circle-middle;
+      margin-bottom: 26px;
+    }
+    & h3 {
+      @include underline-middle(-22px);
+      margin-bottom: 35px;
+    }
+  }
+
+  .skills__title {
+    margin-bottom: 40px;
+  }
+}

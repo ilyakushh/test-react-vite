@@ -1,0 +1,146 @@
+@import "../../styles/mixins.scss";
+
+.contact {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 92px;
+}
+
+.content {
+  & > p {
+    @include circle-left;
+    margin-bottom: 6px;
+  }
+  & h3 {
+    @include underline-left(-2px);
+    margin-bottom: 25px;
+  }
+  & h5 {
+    margin-bottom: 20px;
+  }
+}
+
+.socialNetworks {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.groupForm {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.inputWrapper {
+  position: relative;
+  & input {
+    padding-left: 20px;
+    width: 280px;
+    height: 45px;
+    border: 1px solid black;
+  }
+}
+
+.label {
+  position: absolute;
+  padding: 0 8px;
+  top: -10px;
+  left: 12px;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.message {
+  position: relative;
+  & textarea {
+    border: 1px solid black;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 585px;
+    height: 190px;
+    resize: none;
+    outline: none;
+  }
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 10px;
+  & input {
+    width: 11px;
+    height: 11px;
+  }
+  & p {
+    font-weight: 500;
+  }
+}
+
+.submit {
+  margin-top: 0px;
+  & button {
+    @include button;
+  }
+}
+
+.error {
+  color: red;
+  display: block;
+}
+
+@media (max-width: 1060px) {
+  .groupForm {
+    flex-direction: column;
+  }
+  .message textarea {
+    width: 280px;
+  }
+}
+
+@media (max-width: 874px) {
+  .content {
+    & > p {
+      @include circle-left;
+      margin-bottom: 26px;
+    }
+    & h3 {
+      @include underline-left(-12px);
+      margin-bottom: 35px;
+    }
+    & h5 {
+      margin-bottom: 20px;
+    }
+    & h5:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+  .contact {
+    padding-top: 46px;
+    flex-direction: column;
+  }
+
+  .message textarea {
+    width: 100%;
+  }
+
+  .inputWrapper input {
+    width: 100%;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: center;
+  }
+  .contact img {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+.inputWrapper {
+  position: relative;
+  & input {
+    padding-left: 20px;
+    width: 280px;
+    height: 45px;
+    border: 1px solid black;
+  }
+}
+
+.label {
+  position: absolute;
+  padding: 0 8px;
+  top: -10px;
+  left: 12px;
+  z-index: 100;
+  background-color: #fff;
+}

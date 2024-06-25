@@ -1,0 +1,85 @@
+@import "../../styles/mixins.scss";
+
+.about {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  padding-top: 120px;
+  & img {
+    max-width: 400px;
+  }
+}
+
+.content {
+  & > p:first-of-type {
+    @include circle-left;
+    margin-bottom: 12px;
+  }
+  & h3 {
+    @include underline-left(-7px);
+  }
+  & > p:last-of-type {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px 50px;
+}
+
+.skill {
+  display: flex;
+  gap: 20px;
+}
+
+.circle {
+  @include circle-image;
+}
+
+.description {
+  width: 200px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+@media (max-width: 980px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding-top: 40px;
+  }
+  .about__header {
+    margin-bottom: 32px;
+  }
+  .content {
+    & > p:first-of-type {
+      margin-bottom: 26px;
+    }
+    & h3 {
+      @include underline-left(-12px);
+    }
+    & > p:last-of-type {
+      margin-top: 35px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .about__img {
+    width: 300px;
+    height: 340px;
+  }
+}
