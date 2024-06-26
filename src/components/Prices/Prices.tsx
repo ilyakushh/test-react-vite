@@ -3,7 +3,7 @@ import styles from "./Prices.module.scss";
 
 const Prices = () => {
   return (
-    <section className={styles.prices}>
+    <section className={styles.prices} id="prices">
       <p>Прайс-лист</p>
       <div className={styles.items}>
         {pricesData.map((price) => (

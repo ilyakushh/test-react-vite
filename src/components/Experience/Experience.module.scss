@@ -65,7 +65,6 @@
   .experience {
     padding-top: 68px;
     & > p {
-      @include circle-middle;
       margin-bottom: 26px;
     }
     & h3 {

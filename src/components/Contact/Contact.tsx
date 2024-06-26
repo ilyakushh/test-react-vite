@@ -21,7 +21,7 @@ const Contact = () => {
     submitData(data);
   };
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} id="contact">
       <img src={Photo} alt="Photo" />
       <div className={styles.content}>
         <p>Контакты</p>
@@ -29,8 +29,13 @@ const Contact = () => {
         <h5>Любым удобным для вас способом:</h5>
         <div className={styles.socialNetworks}>
           {socialNetworks.map((item, id) => (
-            <a href="#" key={id}>
-              <img src={item} alt="Facebook" />
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={id}
+            >
+              <img src={item.image} alt="Facebook" />
             </a>
           ))}
         </div>
@@ -89,7 +94,7 @@ const Contact = () => {
               id="checkbox"
             />
             <label htmlFor="checkbox">
-              Я согласен(а) с <a href="#">политикой конфиденциальности</a>
+              Я согласен(а) с политикой конфиденциальности
             </label>
             {errors.agree && (
               <div className={styles.error}>{errors.agree.message}</div>

@@ -17,7 +17,11 @@ import jquery from "../assets/Jquery.svg";
 import react from "../assets/React.svg";
 import telegram from "../assets/Telegram.svg";
 
-export const linkIcons = [github, instagram, facebook];
+export const linkIcons = [
+  { image: github, link: "https://github.com/" },
+  { image: instagram, link: "https://www.instagram.com/" },
+  { image: facebook, link: "https://www.facebook.com/" },
+];
 
 export const skillsData = [
   {
@@ -179,13 +183,25 @@ export const pricesData = [
   },
 ];
 
-export const socialNetworks = [facebook, telegram, instagram];
+export const socialNetworks = [
+  {
+    image: facebook,
+    link: "https://www.facebook.com/",
+  },
+  {
+    image: telegram,
+    link: "https://web.telegram.org/",
+  },
+  {
+    image: instagram,
+    link: "https://www.instagram.com/",
+  },
+];
 
 export const navMenu = [
-  "ПРО МЕНЯ",
-  "МОЙ ОПЫТ",
-  "МОИ НАВЫКИ",
-  "МОИ РАБОТЫ",
-  "ПРАЙС-ЛИСТ",
-  "КОНТАКТЫ",
+  { id: "about", text: "ПРО МЕНЯ" },
+  { id: "experience", text: "МОЙ ОПЫТ" },
+  { id: "skills", text: "МОИ НАВЫКИ" },
+  { id: "prices", text: "ПРАЙС-ЛИСТ" },
+  { id: "contact", text: "КОНТАКТЫ" },
 ];

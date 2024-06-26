@@ -6,7 +6,15 @@ type SideBarProps = {
   isOpen: boolean;
   toggleSideBar: () => void;
 };
+
 const SideBar = ({ isOpen, toggleSideBar }: SideBarProps) => {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      toggleSideBar();
+    }
+  };
   return (
     <>
       <div
@@ -23,14 +31,21 @@ const SideBar = ({ isOpen, toggleSideBar }: SideBarProps) => {
           <img src={close} alt="close" onClick={toggleSideBar} />
           <ul className={styles.list}>
             {navMenu.map((item) => (
-              <li key={item}>
-                <a href="#">{item}</a>
+              <li key={item.id} onClick={() => handleScroll(item.id)}>
+                {item.text}
               </li>
             ))}
           </ul>
-          <div className={styles.socilNetworks}>
+          <div className={styles.socialNetworks}>
             {linkIcons.map((item, id) => (
-              <img src={item} alt="Github" key={id} />
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={id}
+              >
+                <img src={item.image} alt="Github" />
+              </a>
             ))}
           </div>
         </nav>

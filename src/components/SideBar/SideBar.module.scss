@@ -33,6 +33,7 @@
     font-weight: bold;
     color: #fff;
     position: relative;
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
@@ -47,7 +48,7 @@
   }
 }
 
-.socilNetworks {
+.socialNetworks {
   display: flex;
   gap: 15px;
   position: absolute;

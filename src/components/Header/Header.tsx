@@ -27,8 +27,13 @@ const Header = ({ toggleSideBar }: HeaderProps) => {
         <div className={styles.line}></div>
         <div className={styles.icons}>
           {linkIcons.map((icon, id) => (
-            <a key={id}>
-              <img src={icon} />
+            <a
+              href={icon.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={id}
+            >
+              <img src={icon.image} />
             </a>
           ))}
         </div>

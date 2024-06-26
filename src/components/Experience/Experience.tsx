@@ -3,7 +3,7 @@ import styles from "./Experience.module.scss";
 
 const Experience = () => {
   return (
-    <section className={styles.experience}>
+    <section className={styles.experience} id="experience">
       <p>Опыт</p>
       <h3>Чем я буду полезна</h3>
       <div className={styles.wrapper}>
